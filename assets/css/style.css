@@ -1,0 +1,236 @@
+/*CUSTOM FONT FAMILY online*/
+@font-face {
+  font-family: 'Inter';
+  src: url('../plugins/inter-font/Inter-VariableFont_slnt,wght.ttf') format('ttf'),
+
+  /* Add more font formats if available */
+  font-weight: normal;
+  font-style: normal;
+}
+
+:root{
+	--light: #f2f2f2; 
+	--dark: #0d1432;
+	--secondary-dark: #74777b;
+	--white: #ffffff;
+	--black: #040000;
+
+	--opacity-gray: rgba(24, 49, 83, 0.2);
+
+	--font-family: 'Inter', sans-serif;
+}
+
+*{	
+	padding: 0;
+	margin: 0;
+	font-family: var(--font-family) !important;
+}
+body{
+	height: 100vh;
+	background-color: var(--light);
+}
+.logo{
+	background: var(--dark);
+}
+.main-container{
+	min-height: 79vh;
+}
+/*======================================
+								TOGGLE
+=======================================*/
+.side-bar.toggle{
+	width: 70px;
+}
+.side-bar.toggle .text-span{
+	display: none;
+}
+.side-bar .text-span{
+	white-space: nowrap;
+	width: 20px;
+}
+.content.toggle{
+	left: 70px;
+	width: calc(100% - 70px);
+}
+.registerform,
+.loginForm{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/*======================================
+								FORM
+=======================================*/
+/*LOGIN*/
+.hf-bg{
+	background: var(--dark) !important;
+}
+.login-container{
+	min-height: 100vh;
+}
+.registerform{
+	width: 460px;
+	height: 87%;
+}
+.loginForm{
+	width: 460px;
+	height: 80%;
+}
+.form-container{
+	height: 75vh !important;
+	position: relative;
+}
+
+/*======================================
+	side-bar
+=======================================*/
+.side-bar{
+	position: fixed;
+	background: var(--white);
+	top: 0;
+	left: 0;
+	height: 100%;
+	padding: 0 10px;
+	width: 270px;
+	transition: width 0.2s ease;
+	z-index: 10;
+}
+.logout,
+.nav-item {
+	border-radius: 4px;
+	font-weight: 500;
+	color: var(--dark);
+}
+.logout:hover,
+.nav-item:hover,
+.active{
+	background: var(--dark);
+	color: var(--white) !important;
+}
+li .nav-link{
+	display: flex;
+	flex-direction: row;
+	column-gap: 8px;
+	position: relative;
+}
+.icon-span{
+	display: flex;
+	width: 25px;
+}
+.tooltips{
+	display: none;
+}  
+/*======================================
+		CONTENT
+=======================================*/
+.content{
+	width: calc(100% - 270px);
+	background-color: var(--light);
+	position: relative;
+	left: 270px;
+	transition: all 0.2s ease;
+}
+
+
+/*TABLE*/
+.tablehead-wrapper{
+	background: var(--dark);
+	opacity: 0.9;
+}
+tr{
+      height: 50px;
+   }
+.table-container {
+	overflow-y: auto;
+	max-height: 80vh;
+}
+
+.imagebackground {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.imageopacity{
+	background: rgba(0, 0, 0, 0.6);
+	height: 70vh;
+}
+.imageopacity2{
+	background: rgb(13 20 50 / 70%);
+	min-height: 70vh !important;
+}
+
+@media (max-width: 900px){
+	.side-bar{
+		z-index: 1000 !important;
+		width: 70px;
+	}
+	.content{
+		width: unset;
+		left: unset;
+	}
+	.side-bar.toggle{
+		width: 270px;
+	}
+	.side-bar .text-span{
+		display: none;
+	}
+	.content{
+		left: 70px;
+		width: calc(100% - 70px);
+	}
+
+	.nav-link:hover .tooltips{
+		display: flex;
+		left: 66px;
+		top: 1px;
+		position: absolute;
+		width: auto;
+		background: #0d6efd;
+		color: var(--white) !important;
+		border-radius: 4px;
+	} 
+	.icon-span{
+		margin: auto;
+		font-size: 20px;
+	}
+	.fa-houses{
+		margin: auto;
+	}
+
+}
+
+@media (min-width: 1300px) {
+	.imageopacity2{
+		width: 50% !important;
+	}
+	.imageopacity2child{
+		width: 90% !important;
+	}
+
+}
+
+
+
+@media (min-width: 993px) {
+	.imageopacity3{
+		background: rgb(13 20 50 / 80%);
+		height: 30vh;
+	}
+}
+@media (max-width: 992px) {
+	.imageopacity3{
+		background: rgb(13 20 50 / 80%);
+		min-height: 30vh;
+	}
+	.propertiesleft,
+	.propertiesright,
+	.footertextcontainer3,
+	.footertextcontainer2,
+	.footertextcontainer,
+	.footertext{
+		width: 100% !important;
+	}
+}
+
